@@ -19,35 +19,12 @@ var etAnteriorBase = document.querySelector('#etAnteriorBase')
 
 var horarioInicio = document.querySelector('#horaInicio')
 var horarioFinal = document.querySelector('#horaFinal')
+var baseInicio = document.querySelector('#baseInicio')
 
 
 var ruta = new Ruta
 
 btnAgregar.addEventListener('click', () => {
-/*
-    //let nombre = nombreBase.value
-    //let minutos = Number(minutosBase.value)
-    //let base = new Base(nombre, minutos)
-
-    let base1 = new Base('Uno',1)
-    let base2 = new Base('Dos',2)
-    let base3 = new Base('Tres',3)
-    let base4 = new Base('Cuatro',4)
-    let base5 = new Base('Cinco',5)
-
-    ruta.agregarBase(base1)
-    ruta.agregarBase(base2)
-    ruta.agregarBase(base3)
-    ruta.agregarBase(base4)
-    //ruta.agregarBase(base5)
-
-    //console.log(ruta)
-    //console.log(ruta.buscarBase("Dos"))
-    //ruta.eliminarBase(base1.nombre)
-
-    ruta.insertarBase(base5,4)
-    console.log(ruta)
-    */
 
     let nombre = nombreBase.value
     let minutos = Number(minutosBase.value)
@@ -94,27 +71,6 @@ btnInsertar.addEventListener('click', () => {
 })
 
 btnCrearTarjeta.addEventListener('click', () => {
-/*
-
-    let horaInicio =  new Date()
-    horaInicio.setHours(horarioInicio.value.slice(0,2))
-    horaInicio.setMinutes(horarioInicio.value.slice(-2))
-    //console.log(horaInicio)
-
-
-    let horaFinal = new Date()
-    horaFinal.setHours(horarioFinal.value.slice(0,2))
-    horaFinal.setMinutes(horarioFinal.value.slice(-2))
-    console.log(horaFinal)
-
-
-    horaFinal.setMinutes(horaFinal.getMinutes() + 50)
-    console.log(horaFinal)
-    //let horarioInicio = horaInicio.value
-    //let horarioFinal = horaFinal.value
-
-    */
-
     let horaInicio =  new Date()
     horaInicio.setHours(horarioInicio.value.slice(0,2))
     horaInicio.setMinutes(horarioInicio.value.slice(-2))
@@ -123,16 +79,9 @@ btnCrearTarjeta.addEventListener('click', () => {
     horaFinal.setHours(horarioFinal.value.slice(0,2))
     horaFinal.setMinutes(horarioFinal.value.slice(-2))
 
-   let base1 = new Base('Soriana',5)
-   let base2 = new Base('Udec',10)
-   let base3 = new Base('Central',15)
-   let base4 = new Base('Plaza',10)
 
-   ruta.agregarBase(base1)
-   ruta.agregarBase(base2)
-   ruta.agregarBase(base3)
-   ruta.agregarBase(base4)
-   
-   console.log(ruta.crearRecorrido('Udec', horaInicio, horaFinal))
+    let nombre = baseInicio.value
+
+   console.log(ruta.crearRecorrido(nombre, horaInicio, horaFinal))
 })
 
