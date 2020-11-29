@@ -45,7 +45,7 @@ export default class Ruta{
             this.inicio.anterior.siguiente = this.inicio.siguiente
             this.inicio = this.inicio.siguiente
         } else {
-            while (t.siguiente.nombre != nombre){
+            while (t.siguiente.nombre != nombre && t.siguiente != this.inicio){
                 t = t.siguiente
             }
 
